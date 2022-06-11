@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method ="post" >
+
+        <label className="form-label" htmlFor="id">ID:</label><br>
+        <input name="id" placeholder="ID here!!" required ><br>
+
+        <label className="form-label" htmlFor="Password">Password  : </label><br>
+        <input name="password" type="password" placeholder="passsword"   required><br>
+        <label for ="Approved"> <!-- Radial type input -->
+            <input id ="Approved" type ="radio" name="approvedSystem" value="Approved" checked>Approved <!-- checked == default selected-->
+        </label>
+        <label for="Not-Approved">
+            <input id ="Not-Approved" type ="radio" name="approvedSystem" value="Not-Approved">Not-Approved
+        </label><br>
+ 
+        <button >SUBMIT</button>
+    </form>
+</body>
+</html>

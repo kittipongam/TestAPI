@@ -1,0 +1,61 @@
+{"data":
+        [
+            {
+                "id": 1042,
+                "data": 1,
+                "timestamp": "2020-07-08T08:22:20.348Z",
+                "data2": null
+            },
+            {
+                "id": 1043,
+                "data": 2,
+                "timestamp": "2020-07-08T08:22:50.330Z",
+                "data2": null
+            },
+            {
+                "id": 1044,
+                "data": 3,
+                "timestamp": "2020-07-08T08:23:20.337Z",
+                "data2": null
+            },
+            {
+                "id": 1045,
+                "data": 4,
+                "timestamp": "2020-07-08T08:23:50.332Z",
+                "data2": null
+            },
+            {
+                "id": 1046,
+                "data": 5,
+                "timestamp": "2020-07-08T08:24:20.352Z",
+                "data2": null
+            },
+            {
+                "id": 1047,
+                "data": 6,
+                "timestamp": "2020-07-08T08:24:50.328Z",
+                "data2": null
+            },
+            {
+                "id": 1048,
+                "data": 7,
+                "timestamp": "2020-07-08T08:25:20.329Z",
+                "data2": null
+            },
+            {
+                "id": 1049,
+                "data": 8,
+                "timestamp": "2020-07-08T08:25:50.331Z",
+                "data2": null
+            },
+            {
+                "id": 1050,
+                "data": 9,
+                "timestamp": "2020-07-08T08:26:20.313Z",
+                "data2": null
+            }
+
+
+
+        ]
+}
