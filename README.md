@@ -3,6 +3,9 @@
 
 ## SINGLE THREAD ENVENT LOOP
 
+>
+    ....
+>
 
 ## install node
 
@@ -57,7 +60,8 @@ file: home.ejs
 
 ## MOCK UP 3 USERS 
 
-file: userpassword.json
+file: userpassword.json 
+- create json file to simulation for account, password and approve data for 3 users
 
 >
 
@@ -88,6 +92,8 @@ file: userpassword.json
 
 file: server.js
 
+// Create simple server
+
 >
 
     const express = require('express');
@@ -107,9 +113,15 @@ file: server.js
     server.get(["/home"],showApprovePage)
     server.post(["/home"],readVerbPost,UpdateStatus)
 
+>
+
+// Fetch data from API and find min/max/avg 
+// Slice data into 200 rang and sent out as API
 
 
-    ////////////////////////// fetch
+>
+
+    //fetch
     async function test(req,res){
 
     // fetch data api
@@ -157,6 +169,14 @@ file: server.js
         response.render('home.ejs')
     }
 
+>
+
+// Read file from userpassword.json as mock up 3 users
+// Receive data from home.ejs as user, password and Approve status
+// if 3 user receive status Approve, Email wil be sent to Notify
+
+
+>
     var fs = require('fs');
     let rawdata = fs.readFileSync('userpassword.json');
     let obj= JSON.parse(rawdata);
@@ -185,15 +205,15 @@ file: server.js
         let transporter = nodemailer.createTransport({
             service: 'hotmail',
             secure: false, // true for 465, false for other ports
-            auth: { // ข้อมูลการเข้าสู่ระบบ
-            user: 'kittipot.singh@hotmail.com', // email user ของเรา
-            pass: 'Sing0813713472'// email password
+            auth: { 
+            user: 'kittipot.singh@hotmail.com', // email user
+            pass: '************'// email password
             }
         });
-        // เริ่มทำการส่งอีเมล
+        // start send email
         let info = await transporter.sendMail({
-        from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // อีเมลผู้ส่ง
-        to: 'kittipot.singh4g@gmail.com', // อีเมลผู้รับ สามารถกำหนดได้มากกว่า 1 อีเมล โดยขั้นด้วย ,(Comma)
+        from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
+        to: 'kittipot.singh4g@gmail.com', // 
         subject: 'Hello ✔', // หัวข้ออีเมล
         text: 'Hello world?', // plain text body
         html: '<b>Notification</b>' // html body
