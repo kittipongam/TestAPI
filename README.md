@@ -180,19 +180,15 @@ file: server.js
     var fs = require('fs');
     let rawdata = fs.readFileSync('userpassword.json');
     let obj= JSON.parse(rawdata);
-    //console.log(obj.data1.length);
-    //console.log(obj.data[0]);
-
+    
     // check here
     async function UpdateStatus(request,response){
         var f = request.body["id"]  || ""
         var e = request.body["password"]  || ""
         var g = request.body["approvedSystem"]  || ""
         console.log(f,e,g)
-        //console.log(obj.data1.data)
-        // const k = "kittipot432";
-        // const p = "12365";
-        //if(obj.some(x => x.username === f ) && obj.some(y => y.password === e ) ){console.log('PASS')}
+ 
+     
         for(var i =0; i<obj.data1.length;i++){
             if(obj.data1[i].username == f && obj.data1[i].password == e){
                 //console.log('ok')
@@ -214,7 +210,7 @@ file: server.js
         let info = await transporter.sendMail({
         from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
         to: 'kittipot.singh4g@gmail.com', // 
-        subject: 'Hello ✔', // หัวข้ออีเมล
+        subject: 'Hello ✔', // title
         text: 'Hello world?', // plain text body
         html: '<b>Notification</b>' // html body
         });
@@ -223,11 +219,9 @@ file: server.js
                 obj.data1[1].data = 'Empty'
                 obj.data1[2].data = 'Empty'
                 fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2)); 
-            }
-            
+            }       
         }
         response.render('home.ejs')
-
     }
 
 >
@@ -260,13 +254,8 @@ localhost:12000/home
     <li>  After all 3 user aprrove all status will be clear as Empty like a reset <br>
     <img = src="https://user-images.githubusercontent.com/104770048/173199799-8c8ef153-b0de-4a99-9df8-5566f8df89bf.png" alt="emailsent"><br>
     <img = src="https://user-images.githubusercontent.com/104770048/173199886-c0b8e4c6-abb3-402a-9fb5-142128a896d1.png" alt="statusReset"><br>     
-    </li>
-    
+    </li>   
 </ol>
-
-
-
-
 
 #### next for challenging 
 
