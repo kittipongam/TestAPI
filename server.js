@@ -23,7 +23,7 @@ async function test(req,res){
 // fetch data api
 const response =  await fetch('http://3.1.189.234:8091/data/ttntest');
 const data =  await response.json();
-console.log(data.length);
+//console.log(data.length);
 
 
 
