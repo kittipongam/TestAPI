@@ -1,7 +1,7 @@
 # INTRODUCTION
 
 
-## SINGLE THREAD ENVENT LOOP
+## SINGLE THREAD ENVENT LOOP MODEL
 
 >
     ....
@@ -16,8 +16,7 @@ NODE_FETCH:
 
 
 >
-    npm i express ejs nodemailer node-fetch
-    npm install node-fetch@2
+    npm i express ejs nodemailer node-fetch@2
 >
 
 
