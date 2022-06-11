@@ -1,11 +1,11 @@
+# INTRODUCTION
 
 
-
--------------------
-
+## SINGLE THREAD ENVENT LOOP
 
 
-#### install node
+## install node
+
 EJS:
 NODEMAILER:
 EXPRESS:
@@ -19,7 +19,8 @@ NODE_FETCH:
 
 
 
-#### 
+## RENDER FILE FOR LOGIN AND APPROVE SYSTEM
+
 file: home.ejs
 
 >
@@ -54,7 +55,37 @@ file: home.ejs
 
 >
 
-#### 
+## MOCK UP 3 USERS 
+
+file: userpassword.json
+
+>
+
+    {
+    "data1": [
+        {
+        "username": "kittipot1",
+        "password": "123",
+        "data": "Approved"
+        },
+        {
+        "username": "kittipot2",
+        "password": "321",
+        "data": "Empty"
+        },
+        {
+        "username": "kittipot3",
+        "password": "213",
+        "data": "Empty"
+        }
+    ]
+    }
+
+>
+
+## CREATE SIMPLE SERVER
+
+
 file: server.js
 
 >
@@ -181,8 +212,31 @@ file: server.js
 
 >
 
+## RESULT
+
+### Result of finding min/max/avg value
+Can see through console log or we can push,shift array through API that we can send out but for now let see trough console log  
+
+### Result of sending API data slice into 200
+
+localhost:12000/data <br>
+-- here is the result of data that we have slice into 200 array and sent it out throught API <br>
+
+
+### Result of sending Email notification to Receiver 
+localhost:12000/home
+
+<ol>
+    <li>  First input user and password and check at Approve or Not Approve  </li>
+    <li>  If we enter with correct user and password and Approve status Email will be sent as we config as sender and reciever </li>
+    <li>  After all 3 user aprrove all status will be clear as Empty like a reset  </li>
+    
+</ol>
+
+
+
 #### next for challenging 
 
 <ol>
-    <li> make an webpage for hr to write message and send an email for  </li>
+    <li> make an web - page for hr to write message and send an email for  </li>
 </ol>
