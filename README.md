@@ -1,6 +1,8 @@
-### introduction
 
-### 
+
+
+-------------------
+
 
 
 #### install node
@@ -15,16 +17,10 @@ NODE_FETCH:
     npm install node-fetch@2
 >
 
-#### Nodejs Single thread event loop
-
->
-    ....
->
 
 
-#### create front end page for make and login and approve system
-
-file:home.ejs
+#### 
+file: home.ejs
 
 >
 
@@ -58,50 +54,17 @@ file:home.ejs
 
 >
 
-
-#### create login and approve system
-
-mock up 3 user as file: userpassword for simulation
-
-file:userpassword.json
-
->
-
-    {
-    "data1": [
-        {
-        "username": "kittipot1",
-        "password": "123",
-        "data": "Approved"
-        },
-        {
-        "username": "kittipot2",
-        "password": "321",
-        "data": "Empty"
-        },
-        {
-        "username": "kittipot3",
-        "password": "213",
-        "data": "Empty"
-        }
-    ]
-    }
-
->
-
-
-#### create simple webserver
-
+#### 
 file: server.js
 
 >
+
     const express = require('express');
     const server = express();
     server.listen(12000);
 
     const fetch =require('node-fetch')
     const nodemailer = require("nodemailer");
-
 
     var readVerbPost =express.urlencoded({extended:false}) 
     var ejs = require("ejs")
@@ -112,16 +75,10 @@ file: server.js
     server.get(["/data"],test)
     server.get(["/home"],showApprovePage)
     server.post(["/home"],readVerbPost,UpdateStatus)
->
-
-#### fetch data from API and find min,max,avg of value
-#### Slice data into 200 and send out to as API
 
 
-test with real api data
 
->
-
+    ////////////////////////// fetch
     async function test(req,res){
 
     // fetch data api
@@ -147,20 +104,13 @@ test with real api data
     });
     console.log ('Avg =', JSON.stringify(Avg_JSO) );
 
-
-
     //slice data 
     var resultSlice = separateArray(data, 200)
-
-
-
     res.send(JSON.stringify(resultSlice))
-
-
 
     }
 
-    // //  Divided Array 200 unit (test with 200 unit)
+     //  Divided Array 200 unit (test with 200 unit)
     function separateArray(arr, size) {
         var bufferArray = [];
         for (var i = 0; i < arr.length; i += size) {
@@ -170,59 +120,69 @@ test with real api data
         return bufferArray;
     }
 
->
-
-#### render ejs file
-
->
 
     ///approve systerm 
     function showApprovePage(request,response){
         response.render('home.ejs')
     }
 
+    var fs = require('fs');
+    let rawdata = fs.readFileSync('userpassword.json');
+    let obj= JSON.parse(rawdata);
+    //console.log(obj.data1.length);
+    //console.log(obj.data[0]);
+
+    // check here
+    async function UpdateStatus(request,response){
+        var f = request.body["id"]  || ""
+        var e = request.body["password"]  || ""
+        var g = request.body["approvedSystem"]  || ""
+        console.log(f,e,g)
+        //console.log(obj.data1.data)
+        // const k = "kittipot432";
+        // const p = "12365";
+        //if(obj.some(x => x.username === f ) && obj.some(y => y.password === e ) ){console.log('PASS')}
+        for(var i =0; i<obj.data1.length;i++){
+            if(obj.data1[i].username == f && obj.data1[i].password == e){
+                //console.log('ok')
+                obj.data1[i].data = g
+                console.log(i)
+                fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2));  
+            }
+            if(!(obj.data1.some(b => b.data == 'Empty'))){
+            // node mailer OKAY
+        let transporter = nodemailer.createTransport({
+            service: 'hotmail',
+            secure: false, // true for 465, false for other ports
+            auth: { // ข้อมูลการเข้าสู่ระบบ
+            user: 'kittipot.singh@hotmail.com', // email user ของเรา
+            pass: 'Sing0813713472'// email password
+            }
+        });
+        // เริ่มทำการส่งอีเมล
+        let info = await transporter.sendMail({
+        from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // อีเมลผู้ส่ง
+        to: 'kittipot.singh4g@gmail.com', // อีเมลผู้รับ สามารถกำหนดได้มากกว่า 1 อีเมล โดยขั้นด้วย ,(Comma)
+        subject: 'Hello ✔', // หัวข้ออีเมล
+        text: 'Hello world?', // plain text body
+        html: '<b>Notification</b>' // html body
+        });
+        console.log('Message sent: %s', info.messageId);
+                obj.data1[0].data = 'Empty'
+                obj.data1[1].data = 'Empty'
+                obj.data1[2].data = 'Empty'
+                fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2)); 
+            }
+            
+        }
+        response.render('home.ejs')
+
+    }
+
 >
 
-result with min/max/avg data
-
->
-   ....
->
-
-
-
-result of sending api as 200 array json
-
->
-    .....
->
-
-
-
-file server.js
-
-function get body messege and compare value
-
->
-    .....
->
-
-send an email to notify after approve all 3 people
-
->
-    .....
->
-
-result of send an email
-
->
-    .....
->
-
-
-next for challenging 
+#### next for challenging 
 
 <ol>
     <li> make an webpage for hr to write message and send an email for  </li>
 </ol>
-
