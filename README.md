@@ -237,21 +237,34 @@ file: server.js
 ### Result of finding min/max/avg value
 Can see through console log or we can push,shift array through API that we can send out but for now let see trough console log  
 
+<img src="https://user-images.githubusercontent.com/104770048/173199485-5a48260c-384a-4697-a1b9-508c10d8b692.png" alt="minmaxavg">
+
+
 ### Result of sending API data slice into 200
 
 localhost:12000/data <br>
 -- here is the result of data that we have slice into 200 array and sent it out throught API <br>
+<img src="https://user-images.githubusercontent.com/104770048/173199583-4e6337d8-c3d3-494b-aa65-e352b09a5fe5.png" alt="resultofAPI200">
 
 
 ### Result of sending Email notification to Receiver 
 localhost:12000/home
 
 <ol>
-    <li>  First input user and password and check at Approve or Not Approve  </li>
-    <li>  If we enter with correct user and password and Approve status Email will be sent as we config as sender and reciever </li>
-    <li>  After all 3 user aprrove all status will be clear as Empty like a reset  </li>
+    <li>  First input user and password and check at Approve or Not Approve <br>
+        <img src="https://user-images.githubusercontent.com/104770048/173199655-c2fa2c33-e975-441f-9fce-7c87ca836ea5.png" alt ="">
+    </li>
+    <li>  If we enter with correct user and password and Approve status Email will be sent as we config as sender and reciever <br>
+        <img src="https://user-images.githubusercontent.com/104770048/173199718-217105ed-1fac-42df-b345-086dde68f1fa.png" alt="statuApprove">
+    </li>
+    <li>  After all 3 user aprrove all status will be clear as Empty like a reset <br>
+    <img = src="https://user-images.githubusercontent.com/104770048/173199799-8c8ef153-b0de-4a99-9df8-5566f8df89bf.png" alt="emailsent"><br>
+    <img = src="https://user-images.githubusercontent.com/104770048/173199886-c0b8e4c6-abb3-402a-9fb5-142128a896d1.png" alt="statusReset"><br>     
+    </li>
     
 </ol>
+
+
 
 
 
