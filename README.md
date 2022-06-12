@@ -220,7 +220,7 @@ file: server.js <br>
             secure: false, // true for 465, false for other ports
             auth: { // information
             user: 'kittipot.singh@hotmail.com', // email user ของเรา
-            pass: 'Sing0813713472'// email password
+            pass: '************'// email password
             }
         });
         // nodemailer
