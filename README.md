@@ -215,23 +215,23 @@ file: server.js <br>
             }
             if(!(obj.data1.some(b => b.data == 'Empty'))){
             // node mailer OKAY
-        let transporter = nodemailer.createTransport({
-            service: 'hotmail',
-            secure: false, // true for 465, false for other ports
-            auth: { 
-            user: 'kittipot.singh@hotmail.com', // email user
-            pass: '************'// email password
-            }
-        });
-        // start send email
-        let info = await transporter.sendMail({
-        from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
-        to: 'kittipot.singh4g@gmail.com', // 
-        subject: 'Hello ✔', // title
-        text: 'Hello world?', // plain text body
-        html: '<b>Notification</b>' // html body
-        });
-        console.log('Message sent: %s', info.messageId);
+                let transporter = nodemailer.createTransport({
+                    service: 'hotmail',
+                    secure: false, // true for 465, false for other ports
+                    auth: { 
+                    user: 'kittipot.singh@hotmail.com', // email user
+                    pass: '************'// email password
+                    }
+                });
+                // start send email
+                let info = await transporter.sendMail({
+                    from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
+                    to: 'kittipot.singh4g@gmail.com', // 
+                    subject: 'Hello ✔', // title
+                    text: 'Hello world?', // plain text body
+                    html: '<b>Notification</b>' // html body
+                    });
+                    console.log('Message sent: %s', info.messageId);
                 obj.data1[0].data = 'Empty'
                 obj.data1[1].data = 'Empty'
                 obj.data1[2].data = 'Empty'
