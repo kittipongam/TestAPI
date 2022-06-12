@@ -4,6 +4,9 @@ THIS TEST IS FROM SWIFT DYNAMIC
 
 ## SINGLE THREAD ENVENT LOOP MODEL PRINCIPLE
 
+img{
+    text-align: center;
+}
 <img src="https://user-images.githubusercontent.com/104770048/173200501-966c978c-70a2-45c0-9b4d-318d88438f92.png" alt="">
 
 >
@@ -12,10 +15,10 @@ THIS TEST IS FROM SWIFT DYNAMIC
 
 ## install node
 
-EJS:
-NODEMAILER:
-EXPRESS:
-NODE_FETCH:
+EJS: <br>
+NODEMAILER: <br>
+EXPRESS: <br>
+NODE_FETCH: <br>
 
 
 >
@@ -62,7 +65,7 @@ file: home.ejs
 
 ## MOCK UP 3 USERS 
 
-file: userpassword.json 
+file: userpassword.json <br>
 - create json file to simulation for account, password and approve data for 3 users
 
 >
@@ -92,7 +95,7 @@ file: userpassword.json
 ## CREATE SIMPLE SERVER
 
 
-file: server.js
+file: server.js <br>
 
 // Create simple server
 
@@ -117,8 +120,8 @@ file: server.js
 
 >
 
-// Fetch data from API and find min/max/avg 
-// Slice data into 200 rang and sent out as API
+// Fetch data from API and find min/max/avg  <br>
+// Slice data into 200 rang and sent out as API <br>
 
 
 >
@@ -173,9 +176,9 @@ file: server.js
 
 >
 
-// Read file from userpassword.json as mock up 3 users
-// Receive data from home.ejs as user, password and Approve status
-// if 3 user receive status Approve, Email wil be sent to Notify
+// Read file from userpassword.json as mock up 3 users <br>
+// Receive data from home.ejs as user, password and Approve status <br>
+// if 3 user receive status Approve, Email wil be sent to Notify <<br>>
 
 
 >
