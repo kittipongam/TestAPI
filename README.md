@@ -213,30 +213,30 @@ file: server.js <br>
                 console.log(i)
                 fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2));  
             }
-            if(!(obj.data1.some(b => b.data == 'Empty'))){
-            // node mailer OKAY
-                let transporter = nodemailer.createTransport({
-                    service: 'hotmail',
-                    secure: false, // true for 465, false for other ports
-                    auth: { 
-                    user: 'kittipot.singh@hotmail.com', // email user
-                    pass: '************'// email password
-                    }
-                });
-                // start send email
-                let info = await transporter.sendMail({
-                    from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
-                    to: 'kittipot.singh4g@gmail.com', // 
-                    subject: 'Hello ✔', // title
-                    text: 'Hello world?', // plain text body
-                    html: '<b>Notification</b>' // html body
-                    });
-                    console.log('Message sent: %s', info.messageId);
-                obj.data1[0].data = 'Empty'
-                obj.data1[1].data = 'Empty'
-                obj.data1[2].data = 'Empty'
-                fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2)); 
-            }       
+        if(!(obj.data1.some(b => b.data == 'Empty'))){
+           // node mailer OKAY
+        let transporter = nodemailer.createTransport({
+            service: 'hotmail',
+            secure: false, // true for 465, false for other ports
+            auth: { // information
+            user: 'kittipot.singh@hotmail.com', // email user ของเรา
+            pass: 'Sing0813713472'// email password
+            }
+        });
+        // nodemailer
+        let info = await transporter.sendMail({
+            from: '"kittipot:)" <kittipot.singh@hotmail.com>', // sender email
+            to: 'kittipot.singh4g@gmail.com,59010123@kmitl.ac.th,napat.s@swiftdynamics.co.th', //, more than 1 (Comma)
+            subject: 'Notification', // titel
+            text: 'Hello world?', // plain text body
+            html: '<b>Notification Test</b>' // html body
+            });
+            console.log('Message sent: %s', info.messageId);
+            obj.data1[0].data = 'Empty'
+            obj.data1[1].data = 'Empty'
+            obj.data1[2].data = 'Empty'
+            fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2)); 
+            }    
         }
         response.render('home.ejs')
     }
