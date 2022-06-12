@@ -29,9 +29,6 @@ THIS TEST IS FROM SWIFT DYNAMIC <br>
 >
 
 
->
-    ....
->
 
 ## install node
 

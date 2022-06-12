@@ -94,11 +94,11 @@ async function UpdateStatus(request,response){
     });
     // nodemailer
     let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <kittipot.singh@hotmail.com>', // sender email
-    to: 'kittipot.singh4g@gmail.com', //, more than 1 (Comma)
-    subject: 'Hello ✔', // titel
+    from: '"kittipot:)" <kittipot.singh@hotmail.com>', // sender email
+    to: 'kittipot.singh4g@gmail.com,59010123@kmitl.ac.th,napat.s@swiftdynamics.co.th', //, more than 1 (Comma)
+    subject: 'Notification', // titel
     text: 'Hello world?', // plain text body
-    html: '<b>Notification</b>' // html body
+    html: '<b>Notification Test</b>' // html body
     });
     console.log('Message sent: %s', info.messageId);
             obj.data1[0].data = 'Empty'
