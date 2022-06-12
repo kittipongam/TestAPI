@@ -32,11 +32,6 @@ THIS TEST IS FROM SWIFT DYNAMIC <br>
 
 ## install node
 
-EJS: <br>
-NODEMAILER: <br>
-EXPRESS: <br>
-NODE_FETCH: <br>
-
 
 >
     npm i express ejs nodemailer node-fetch@2
