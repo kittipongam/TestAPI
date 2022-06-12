@@ -4,10 +4,30 @@ THIS TEST IS FROM SWIFT DYNAMIC <br>
 
 ## SINGLE THREAD ENVENT LOOP MODEL PRINCIPLE
 
-img{
-    text-align: center;
-}
+
 <img src="https://user-images.githubusercontent.com/104770048/173200501-966c978c-70a2-45c0-9b4d-318d88438f92.png" alt="">
+
+<ul>
+    <li>  Client send request to Web Server      </li>
+    <li>  Node JS internally maintain a limited thread pool services to client request</li>
+    <li>  Node JS receives request and place in to Event Queue      </li>
+    <li>  Node JS web server has component Event Loop to receive request and process which uses Single Thread Only and its main point  </li>
+    <li>  Event Loop check any client request placed in event Queue  </li>
+</ul>
+
+<p> if client request "DOES NOT" require any Blocking IO operation then process everthing and send it back </p>
+<p> if client requires some Blocking IO operation  </p>
+<ol>
+    <li>checks thread available from internal thread pool</li>
+    <li>Pick up one thread and assign this to client request</li>
+    <li>that thread is responsible for taking that request, process, perform Blocking IO and prepare to send back to event loop</li>
+    <li>Event loop: send that response to respective Client</li>
+</ol>
+
+>
+    *** Blocking IO operation : such as interacting with database, File system, External Service
+>
+
 
 >
     ....
