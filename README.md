@@ -277,5 +277,5 @@ localhost:12000/home
 #### next for challenging 
 
 <ol>
-    <li> make an web - page for hr to write message and send an email for  </li>
+    <li> *****predictive data will be added cause knowledge and time (ML or AI || tenserflow can be add)*****</li>
 </ol>
