@@ -232,9 +232,9 @@ file: server.js <br>
             html: '<b>Notification Test</b>' // html body
             });
             console.log('Message sent: %s', info.messageId);
-            obj.data1[0].data = 'Empty'
-            obj.data1[1].data = 'Empty'
-            obj.data1[2].data = 'Empty'
+            obj.data1[0].data = 'Empty'     // for simulation only not in production
+            obj.data1[1].data = 'Empty'     // for simulation only not in production 
+            obj.data1[2].data = 'Empty'     // for simulation only not in production 
             fs.writeFileSync('userpassword.json', JSON.stringify(obj, null, 2)); 
             }    
         }
