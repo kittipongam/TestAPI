@@ -190,7 +190,7 @@ file: server.js <br>
 
 // Read file from userpassword.json as mock up 3 users <br>
 // Receive data from home.ejs as user, password and Approve status <br>
-// if 3 user receive status Approve, Email wil be sent to Notify <<br>>
+// if 3 user receive status Approve, Email wil be sent to Notify <br>
 
 
 >
